@@ -3,17 +3,18 @@ package org.ihsusta.spring.damain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Person {
 
-    public Person() {
-    }
-
     @Id
     @GeneratedValue
     private Integer id;
+
     private String name;
+
+    @Min(value = 18, message = "未成年人禁止入内")
     private Integer age;
 
     public Integer getId() {
