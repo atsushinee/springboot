@@ -25,7 +25,7 @@ public class HttpAspect {
 
     @After("log()")
     public void doAfter() {
-        logger.info("do something after");
+        logger.info("do something after...");
     }
 
 }
